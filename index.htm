@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                background-color: #fff;
+            }
+            .navbar {
+                width: 40%;
+                float: right;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                margin-right: 100px;
+                padding: 0px;
+                position: fixed;
+                left: 50%;
+            }
+            .nav > li {
+                width: 140px;
+                text-align-last: center;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: 17px;
+                font-weight: bold;
+            }
+            #imgArea {
+                background-image: url("images/bgimg.jpg");
+                background-attachment: fixed;
+                height: 935px;
+                background-size: cover;
+            }
+            #content {
+                margin-top: 0px;
+            }
+            #text {
+                font-weight: bold;
+                color: black;
+                position: relative;
+                top: 400px;
+                text-align: center;
+                font-size: 70px;
+            }
+            #about {
+                height: 500px;
+                width: 80%;
+                margin: auto;
+            }
+            #aboutLeft {
+                width: 30%;
+                height: 500px;
+                float: left;
+                text-align: center;
+                /* font-size: 40px; */
+                height: 40px;
+                padding-top: 220px;
+                padding-bottom: 220px;
+            }
+            .heading {
+                font-size: 40px;
+                text-align: center;
+            }
+            #aboutRight {
+                width: 70%;
+                height: 500px;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                float: right;
+            }
+            #aboutRight h1 {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            #aboutRight p {
+                font-size: 20px;
+            }
+            #skills {
+                height: 1100px;
+                background-color: #e7e6e6;
+                text-align: center;
+            }
+            #aboutLeft::after {
+                position: relative;
+                top: -20px;
+                background-color: cornflowerblue;
+                width: 50px;
+                height: 2px;
+                content: " ";
+                display: inline-block;
+            }
+            #skills .heading {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 30px;
+            }
+            #skills .heading::after {
+                position: relative;
+                top: 10px;
+                left: -93px;
+                background-color: darkmagenta;
+                width: 30px;
+                height: 2px;
+                content: " ";
+                display: inline-block;
+            }
+            #skills h3 {
+                font-weight: bold;
+                margin: 20px;
+            }
+            .skillbox {
+                padding-left: 10%;
+                padding-right: 10%;
+                height: 150px;
+                text-align: center;
+            }
+            .language-icon {
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+                border-radius: 30px;
+                text-align: center;
+                margin-left: 30px;
+                margin-right: 30px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2),
+                    0 3px 6px rgba(0, 0, 0, 0.2);
+            }
+            .icon-c {
+                background-image: url(/images/logo/c.png);
+                background-size: contain;
+            }
+            .icon-c-pound {
+                background-image: url(/images/logo/c-pound.png);
+                background-size: contain;
+            }
+            .icon-python {
+                background-image: url(/images/logo/python.png);
+                background-size: contain;
+            }
+            .icon-java {
+                background-image: url(/images/logo/java.png);
+                background-size: contain;
+            }
+            .icon-javascript {
+                background-image: url(/images/logo/javascript.png);
+                background-size: contain;
+                background-color: #f4e11e;
+            }
+            .icon-html {
+                background-image: url(/images/logo/html.png);
+                background-size: contain;
+            }
+            .icon-css {
+                background-image: url(/images/logo/css.png);
+                background-size: contain;
+            }
+            .icon-oracle {
+                background-image: url(/images/logo/oracle.png);
+                background-size: contain;
+            }
+            .icon-mysql {
+                background-image: url(/images/logo/mysql.png);
+                background-size: contain;
+            }
+            .icon-spring {
+                background-image: url(/images/logo/spring.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .icon-springboot {
+                background-image: url(/images/logo/springboot.png);
+                background-size: contain;
+            }
+            .icon-springsecurity {
+                background-image: url(/images/logo/springsecurity.png);
+                background-size: contain;
+            }
+            .icon-jquery {
+                background-image: url(/images/logo/jquery.png);
+                background-size: contain;
+            }
+            .icon-bootstrap {
+                background-image: url(/images/logo/bootstrap.png);
+                background-size: contain;
+            }
+            .icon-git {
+                background-image: url(/images/logo/git.png);
+                background-size: contain;
+            }
+            .icon-aws {
+                background-image: url(/images/logo/aws.png);
+                background-size: contain;
+            }
+            .icon-window {
+                background-image: url(/images/logo/window.png);
+                background-size: contain;
+            }
+            .icon-linux {
+                background-image: url(/images/logo/linux.png);
+                background-size: contain;
+            }
+            .cover {
+                display: none;
+                width: 120px;
+                height: 120px;
+                border-radius: 30px;
+                text-align: center;
+                overflow: hidden;
+                background-color: black;
+                opacity: 0.9;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <!-- 컨테이너 값이 전체화면을 쓴다는 속성, width값이 100% -->
+
+                <button
+                    type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target="#myNavbar"
+                >
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Skills</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="content">
+            <div id="imgArea">
+                <div id="text"></div>
+            </div>
+            <div id="about">
+                <div id="aboutLeft">
+                    <div class="heading">About Me</div>
+                </div>
+                <div id="aboutRight">
+                    <h1>김솔 말 이쁘게</h1>
+                    <p>말 이뿌게 하자^^</p>
+                </div>
+            </div>
+            <div id="skills">
+                <div class="heading">Skills</div>
+                <h3>Language</h3>
+                <div class="skillbox">
+                    <span class="language-icon icon-basic icon-c"></span>
+                    <span class="language-icon icon-basic icon-c-pound"></span>
+                    <span class="language-icon icon-expert icon-java"></span>
+                    <span class="language-icon icon-basic icon-python"></span>
+                    <span
+                        class="language-icon icon-middleclass icon-html"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-css"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-javascript"
+                    ></span>
+                </div>
+                <h3>DataBase</h3>
+                <div class="skillbox">
+                    <span
+                        class="language-icon icon-middleclass icon-oracle"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-mysql"
+                    ></span>
+                </div>
+                <h3>FrameWork & Library</h3>
+                <div class="skillbox">
+                    <span
+                        class="language-icon icon-middleclass icon-spring"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-springboot"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-springsecurity"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-bootstrap"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-jquery"
+                    ></span>
+                </div>
+                <h3>Server & OS</h3>
+                <div class="skillbox">
+                    <span
+                        class="language-icon icon-middleclass icon-git"
+                    ></span>
+                    <span
+                        class="language-icon icon-middleclass icon-aws"
+                    ></span>
+                    <span class="language-icon icon-expert icon-window"></span>
+                    <span
+                        class="language-icon icon-middleclass icon-linux"
+                    ></span>
+                </div>
+            </div>
+            <div id="project"></div>
+            <div id="contact"></div>
+        </div>
+    </body>
+    <script>
+        var index = 0;
+        var inputText = "개발자 김동욱의 포트폴리오입니다.";
+        var blink = document.createElement("span");
+        blink.className = "blink";
+        blink.style.display = "inline-block";
+        blink.style.width = "7px";
+        blink.style.height = "78px";
+        blink.style.backgroundColor = "black";
+        blink.style.position = "relative";
+        blink.style.top = "10px";
+
+        var timer = setInterval(function () {
+            var text = inputText[index];
+            index++;
+            $("#text").append(text);
+            setInterval(timer);
+            $("#text").append(blink);
+            if (index == inputText.length) {
+                clearInterval(timer);
+            }
+        }, 300);
+
+        var cursor = setInterval(function () {
+            if (blink.style.opacity == 1) {
+                blink.style.opacity = 0;
+            } else {
+                blink.style.opacity = 1;
+            }
+        }, 500);
+
+        var languageIcon = document.getElementsByClassName("language-icon");
+        for (var i = 0; i < languageIcon.length; i++) {
+            var cover = document.createElement("div");
+            cover.className = "cover";
+            languageIcon[i].appendChild(cover);
+        }
+    </script>
+</html>
